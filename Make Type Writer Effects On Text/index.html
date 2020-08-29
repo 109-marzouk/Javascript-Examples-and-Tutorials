@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Textarea Characters With On-Input Event</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 id="my_name"></h1>
+    <script>
+      var myNameElement = document.getElementById("my_name"),
+      myName = "Mohamed Marzouk",
+      i = 0;
+
+      setInterval(function (){
+        myNameElement.textContent += myName[i];
+        i++;
+        if(i > myName.length){
+          myNameElement.textContent = "";
+          i = 0;
+        }
+      }, 100);
+
+    </script>
+  </body>
+</html>
