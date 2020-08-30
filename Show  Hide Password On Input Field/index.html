@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Textarea Characters With On-Input Event</title>
+  </head>
+  <body>
+    <input id="pass" type="password" required></input>
+    <button id="visablitiy_control">show</button>
+    <script>
+      var btn = document.getElementById("visablitiy_control"),
+          passInput = document.getElementById("pass");
+
+          btn.onclick = function () {
+            if(this.textContent === "show"){
+              passInput.setAttribute("type", "text");
+              this.textContent = "hide";
+            }
+            else {
+              passInput.setAttribute("type", "password");
+              this.textContent = "show";
+            }
+          }
+    </script>
+  </body>
+</html>
